@@ -1,0 +1,45 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Add job</h2>
+    </div>
+    <div class="panel-body">
+        <ng-form name="jobAddForm">
+            <div class="row">
+                <div class="form-group" ng-class="{ 'has-error': jobAddForm.jobId.$invalid }">
+                    <label for="jobId">Job Id: </label>
+                    <input id="jobId" name="minSalary" type="text" ng-model="job.jobId" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group" ng-class="{ 'has-error': jobAddForm.jobTitle.$invalid }">
+                    <label for="jobTitle">Job Title: </label>
+                    <input id="jobTitle" name="jobTitle" type="text" ng-model="job.jobTitle" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group" ng-class="{ 'has-error': jobAddForm.maxSalary.$invalid }">
+                    <label for="maxSalary">Maximum Salary: </label>
+                    <input id="maxSalary" name="maxSalary" type="text" ng-model="job.maxSalary" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group" ng-class="{ 'has-error': jobAddForm.minSalary.$invalid }">
+                    <label for="minSalary">Minimum Salary: </label>
+                    <input id="minSalary" name="minSalary" type="text" ng-model="job.minSalary" required>
+                </div>
+            </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-7">
+                    <div class="container">
+                        <!--TODO#HR4-->
+                        <input type="submit" ng-click="create(job)" value="Save" ng-disabled= "jobAddForm.$invalid"/>
+                        <input type="reset" ng-click="reset()" value="Reset" />
+                    </div>
+                </div>
+            </div>
+        </ng-form>
+    </div>
+</div>

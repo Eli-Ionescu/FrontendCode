@@ -18,6 +18,6 @@
 
     <ul>
         Type
-        <li ng-repeat="color in colors | filter: {type: searchText, }">{{color.text}}</li>
+        <li ng-repeat="color in colors | filter: {text: searchText }">{{color.text}}</li>
     </ul>
 </div>
